@@ -1,0 +1,13 @@
+#include <configs/qemu_arm_defconfig>
+
+CONFIG_NET_LWIP=y
+CONFIG_CMD_HTTPD=y
+CONFIG_CMD_DHCP=y
+CONFIG_CMD_PING=y
+CONFIG_CMD_DNS=y
+CONFIG_CMD_WGET=y
+# CONFIG_CMD_EXT2 is not set
+# CONFIG_CMD_EXT4 is not set
+# CONFIG_CMD_FAT is not set
+# CONFIG_CMD_FS_GENERIC is not set
+# CONFIG_LMB is not set

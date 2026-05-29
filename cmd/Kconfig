@@ -2328,6 +2328,20 @@ config WGET_BUILTIN_CACERT_PATH
 	  Certification Authority certificates, a.k.a. root certificates, for
 	  the purpose of authenticating HTTPS connections.
 
+config CMD_HTTPD
+	bool "httpd - Web recovery HTTP server"
+	depends on NET_LWIP
+	select PROT_TCP_LWIP
+	select CMD_DHCP
+	help
+	  Start a web server on port 80 for firmware recovery/upgrade.
+	  Provides a web interface similar to "immortal U-Boot" found on
+	  routers. Supports firmware upload via HTTP POST and system status
+	  display. Works with lwIP network stack.
+
+	  Type "httpd" in U-Boot console to start the web server.
+	  Press Ctrl+C to stop.
+
 config CMD_PXE
 	bool "pxe"
 	select PXE_UTILS
